@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Jiuri Machine Tool Tech Official Website",
+  "description": "A high-end responsive corporate website for Jiangsu Jiuri Machine Tool Technology Co., Ltd., featuring industrial aesthetics, a custom navigation system, and an AI-powered product assistant.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
