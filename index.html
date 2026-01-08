@@ -7,90 +7,132 @@
     <title>江苏久日机床科技有限公司 - 专注JCOE/UOE直缝焊管装备</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@400;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700;800&display=swap');
-        
         :root {
-            --tech-blue: #004ea1;
-            --deep-blue: #003366;
-            --accent-blue: #00a8ff;
-            --text-dark: #1a1a1a;
+            --tech-cyan: #00d4ff;
+            --industrial-blue: #001428;
+            --deep-space: #000a1a;
+            --brand-blue: #004ea1;
+            --brand-blue-deep: #003366;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
         
         body {
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
-            color: var(--text-dark);
+            background-color: var(--deep-space);
+            color: #ffffff;
             margin: 0;
-            padding: 0;
             overflow-x: hidden;
-            background-color: #ffffff;
         }
 
-        .animate-fadeIn {
-            animation: fadeIn 0.8s ease-out forwards;
+        /* 核心工业风组件 */
+        .industrial-glass {
+            background: rgba(0, 20, 40, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-left: 5px solid var(--tech-cyan);
+            border-radius: 0px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
         }
 
-        .animate-slideUp {
-            animation: slideUp 0.8s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--tech-blue);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--deep-blue);
-        }
-
-        /* Glassmorphism utility */
-        .glass {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        /* 高级 3D 立体文字样式 */
+        .text-3d-brand {
+            color: var(--brand-blue);
+            text-shadow: 
+                1px 1px 0px var(--brand-blue-deep),
+                2px 2px 0px var(--brand-blue-deep),
+                3px 3px 0px var(--brand-blue-deep),
+                4px 4px 0px var(--brand-blue-deep),
+                5px 5px 0px var(--brand-blue-deep),
+                6px 6px 15px rgba(0,0,0,0.6);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
         }
         
-        .dark-glass {
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .text-3d-brand:hover {
+            transform: translateY(-8px) scale(1.03);
+            text-shadow: 
+                1px 1px 0px var(--brand-blue-deep),
+                2px 2px 0px var(--brand-blue-deep),
+                3px 3px 0px var(--brand-blue-deep),
+                4px 4px 0px var(--brand-blue-deep),
+                5px 5px 0px var(--brand-blue-deep),
+                6px 6px 0px var(--brand-blue-deep),
+                7px 7px 0px var(--brand-blue-deep),
+                8px 8px 30px rgba(0,0,0,0.8);
         }
+
+        .cut-corner {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+        }
+
+        .hud-title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 900;
+        }
+        .hud-title::before {
+            content: '';
+            width: 5px;
+            height: 24px;
+            background: var(--tech-cyan);
+            box-shadow: 0 0 10px var(--tech-cyan);
+        }
+
+        .font-mono-tech {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* 动画 - 更加丝滑的下拉效果 */
+        @keyframes nav-slide-down {
+            0% { 
+                opacity: 0; 
+                transform: translate(-50%, 12px) scale(0.95); 
+                filter: blur(4px);
+            }
+            100% { 
+                opacity: 1; 
+                transform: translate(-50%, 0) scale(1); 
+                filter: blur(0);
+            }
+        }
+        .animate-nav-dropdown {
+            animation: nav-slide-down 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        }
+
+        .animate-fadeIn { animation: fadeIn 0.6s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          display: flex;
+          animation: marquee 30s linear infinite;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--deep-space); }
+        ::-webkit-scrollbar-thumb { background: var(--tech-cyan); }
     </style>
-    <script type="importmap">
-    {
-      "imports": {
-        "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-        "react/": "https://esm.sh/react@^19.2.3/",
-        "react": "https://esm.sh/react@^19.2.3"
-      }
-    }
-    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
 </head>
 <body>
     <div id="root"></div>

@@ -7,7 +7,8 @@ interface AboutPageProps {
 }
 
 const AboutPage: React.FC<AboutPageProps> = ({ lang }) => {
-  const t = TRANSLATIONS[lang].about;
+  // Use nav translations for page/section headers as they are missing in the 'about' object
+  const navT = TRANSLATIONS[lang].nav;
 
   return (
     <div className="pt-20 animate-fadeIn">
@@ -15,7 +16,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang }) => {
       <section className="bg-gradient-to-r from-[#003366] to-[#004ea1] py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{t.title}</h1>
+          {/* Fix: Property 'title' does not exist on 'about' object; using 'nav.about' instead */}
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{navT.about}</h1>
           <div className="w-16 h-1 bg-blue-400 mx-auto"></div>
         </div>
       </section>
@@ -59,7 +61,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang }) => {
       <section className="py-24 bg-slate-900 text-white relative">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">{t.history}</h2>
+            {/* Fix: Property 'history' does not exist on 'about' object; using 'nav.about_history' instead */}
+            <h2 className="text-3xl font-bold mb-4">{navT.about_history}</h2>
             <p className="text-blue-400 font-medium">2006 — 2026</p>
           </div>
           <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border-4 border-blue-900/50">
@@ -77,7 +80,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang }) => {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t.honor}</h2>
+            {/* Fix: Property 'honor' does not exist on 'about' object; using 'nav.about_honors' instead */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{navT.about_honors}</h2>
             <div className="w-12 h-1 bg-[#004ea1] mx-auto"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

@@ -6,7 +6,9 @@ export const COLORS = {
   secondary: '#003366',
   accent: '#00a8ff',
   text: '#2d3436',
-  lightGray: '#f8f9fa'
+  lightGray: '#f8f9fa',
+  industrialGray: 'rgba(31, 31, 31, 0.6)',
+  highlight: '#00d4ff'
 };
 
 export const HISTORY_ITEMS = [
@@ -42,6 +44,80 @@ export const HISTORY_ITEMS = [
   }
 ];
 
+export const CORPORATE_SPIRIT = [
+  { 
+    word: 'Professionalism', 
+    cn: '专业', 
+    desc: 'Deep industrial expertise and rigorous technical standards.', 
+    cnDesc: '深厚的行业沉淀与严苛的技术标准。',
+    icon: 'fa-microchip'
+  },
+  { 
+    word: 'Focus', 
+    cn: '专注', 
+    desc: 'Unwavering commitment to core pipe-forming equipment.', 
+    cnDesc: '始终如一，深耕直缝焊管核心装备领域。',
+    icon: 'fa-bullseye'
+  },
+  { 
+    word: 'Craftsmanship', 
+    cn: '精工', 
+    desc: 'Precision engineering and pursuit of absolute quality.', 
+    cnDesc: '精益求精，对每一个零件、每一道工序的极致追求。',
+    icon: 'fa-compass-drafting'
+  },
+  { 
+    word: 'Innovation', 
+    cn: '创新', 
+    desc: 'Breaking monopolies with self-developed high-end tech.', 
+    cnDesc: '坚持自主研发，不断突破行业技术瓶颈。',
+    icon: 'fa-lightbulb'
+  }
+];
+
+export const CORE_VALUES = [
+  { 
+    id: '01', 
+    title: '市场导向', 
+    subtitle: '以客户为中心', 
+    enTitle: 'Market Orientation', 
+    enSubtitle: 'Customer-Centric',
+    icon: 'fa-users-gear' 
+  },
+  { 
+    id: '02', 
+    title: '技术引领', 
+    subtitle: '以创新驱动发展', 
+    enTitle: 'Technological Leadership', 
+    enSubtitle: 'Innovation-Led',
+    icon: 'fa-diagram-project' 
+  },
+  { 
+    id: '03', 
+    title: '质量为本', 
+    subtitle: '以品质赢得信任', 
+    enTitle: 'Quality as Foundation', 
+    enSubtitle: 'Quality Foundation of Trust',
+    icon: 'fa-shield-halved' 
+  },
+  { 
+    id: '04', 
+    title: '高效务实', 
+    subtitle: '以效益促进成长', 
+    enTitle: 'Efficiency & Pragmatism', 
+    enSubtitle: 'Efficiency for Growth',
+    icon: 'fa-bolt-lightning' 
+  },
+  { 
+    id: '05', 
+    title: '安全环保', 
+    subtitle: '以责任践行使命', 
+    enTitle: 'Safety & Environment', 
+    enSubtitle: 'Safety Responsibility',
+    icon: 'fa-leaf' 
+  }
+];
+
 export const TRANSLATIONS = {
   zh: {
     nav: {
@@ -51,10 +127,11 @@ export const TRANSLATIONS = {
       about_culture: '企业文化',
       about_history: '发展历程',
       about_honors: '荣誉资质',
-      about_tech: '技术实力',
+      about_tech: '制造能力',
       products: '产品展示',
-      products_core: '核心设备展示',
-      news: '新闻中心',
+      products_core: '核心设备',
+      products_video: '产品视频',
+      advantages: '核心优势',
       contact: '联系我们',
       lang: 'English'
     },
@@ -64,12 +141,22 @@ export const TRANSLATIONS = {
       tagline: '赋能全球之冠产业高质量发展',
       btn1: '搜索核心产品',
       btn2: '在线咨询',
+      mission_title: '企业使命',
+      mission_text: '专注焊管装备，赋能全球制管产业高质量发展',
+      vision_title: '企业愿景',
+      vision_text: '成为全球领先的 JCOE/UOE 制管装备解决方案提供商',
+      values_title: '价值观',
+      values_text: '创新 · 精工 · 专业 · 可靠',
+      brand_prop_1: '久专于技，久日以工程师精神为全球客户提供值得信赖的制管解决方案。',
+      brand_prop_2: '以精密机械连接世界。',
       industry_tag: '赋能核心产业',
-      industry_title: '赋能核心能源产业'
+      industry_title: '赋能核心能源产业',
+      partners_title: '合作伙伴',
+      partners_sub: '与全球能源领军企业及行业标杆并肩前行，共创制管未来'
     },
     about: {
       overview_title: '企业介绍',
-      overview_text: '江苏久日机床科技有限公司（JIANGSU JIURI MACHINE TOOL）专注于JCOE/UOE直缝焊管成套生产线装备的研发与制造。我们致力于为全球石油、天然气、氢能、风能及城市管网建设提供高品质、高稳定性的管材成型装备，助力全球能源工业高质量发展。',
+      overview_text: '江苏久日机床科技有限公司（JIANGSU JIURI MACHINE TOOL）专注于JCOE/UOE直缝焊管成套生产线装备的研发与制造。我们致力于为全球石油、天然气、氢能、风能及城市管网建设提供高品质、高稳定性的管材成型装备，助力全球能源工业高质量发展。公司占地总面积66000平。总装基地11000平，办公研发基地3000平，生产基地15000平。',
       main_product: '核心产品：JCOE / UOE 全工艺管材成型生产线',
       culture_title: '企业文化',
       mission: '使命',
@@ -79,9 +166,17 @@ export const TRANSLATIONS = {
       values: '价值观',
       values_text: '创新 · 精工 · 专业 · 可靠',
       spirit: '企业精神',
-      spirit_text: '专业、专注、匠心、创新',
-      core_values_title: '核心价值',
+      spirit_text: '专业、专注、精工、创新',
+      talent_title: '人才理念',
+      talent_text: '久日科技视技术为核心生命力，致力于培养焊管装备领域的尖端工程师、工匠型制造人才及前瞻性研发人才，构建以“匠心精神”为驱动的高素质人才梯队。',
+      talent_philosophy: '以技术为本，以匠心为魂，以创新为驱动。',
+      talent_keywords: '崇尚技术 · 尊重匠心 · 鼓励创新',
+      core_values_title: '核心价值观',
       core_values_list: ['以客户为中心', '技术领先', '质量为基', '高效产出', '安全第一']
+    },
+    footer: {
+      desc: '专注于 JCOE/UOE 大口径直缝焊管装备研发与制造，致力为全球能源工程提供核心动力支持。',
+      products_list: ['JCOE 渐进成型机', 'XB 双边铣边机', 'NHJ 焊管内焊机', '机械扩径机']
     },
     contact: {
       title: '联系我们',
@@ -90,78 +185,146 @@ export const TRANSLATIONS = {
       email: '企业邮箱',
       address: '公司地址',
       address_text: '江苏省海安市李堡工业集中区',
-      recruitment_title: '加入我们 / Join Us',
-      recruitment: '招聘联系：请将简历发送至企业邮箱'
+      recruitment_title: '加入我们',
+      recruitment: '招聘联系：我们正在寻找优秀人才！请将您的个人简历发送至企业邮箱。'
     }
   },
   en: {
     nav: {
       home: 'Home',
       about: 'About Us',
-      about_overview: 'Company Overview',
-      about_culture: 'Corporate Culture',
+      about_overview: 'Overview',
+      about_culture: 'Culture',
       about_history: 'History',
       about_honors: 'Honors',
-      about_tech: 'Tech Strength',
+      about_tech: 'Manufacturing',
       products: 'Products',
       products_core: 'Core Equipment',
-      news: 'News Center',
-      contact: 'Contact Us',
+      products_video: 'Videos',
+      advantages: 'Advantages',
+      contact: 'Contact',
       lang: '中文'
     },
     hero: {
-      title: 'Mastering Technology with Dedication',
-      sub: 'Specialist in JCOE / UOE Longitudinal Welded Pipe Equipment',
-      tagline: 'Empowering the Global Pipe Manufacturing Industry',
+      title: 'Expertise & Excellence',
+      sub: 'Specialist in JCOE / UOE Pipe Forming Equipment',
+      tagline: 'Empowering Global Energy Infrastructure',
       btn1: 'Search Core Products',
-      btn2: 'Consult Now',
+      btn2: 'Inquiry Online',
+      mission_title: 'Mission',
+      mission_text: 'Empowering the global pipe-making industry through specialized welding equipment.',
+      vision_title: 'Vision',
+      vision_text: 'To be the world’s leading provider of JCOE/UOE pipe equipment solutions.',
+      values_title: 'Values',
+      values_text: 'Innovation · Precision · Professionalism · Reliability',
+      brand_prop_1: 'Focused on core pipe-making technologies, Jiuri delivers reliable, engineer-driven solutions trusted by customers worldwide.',
+      brand_prop_2: 'Connecting the world through precision machinery.',
       industry_tag: 'Industrial Empowerment',
-      industry_title: 'Empowering Core Energy Industries'
+      industry_title: 'Empowering Core Energy Industries',
+      partners_title: 'Partners',
+      partners_sub: 'Working alongside global energy leaders and industry benchmarks to create the future of pipe-making.'
     },
     about: {
       overview_title: 'Company Overview',
-      overview_text: 'Jiangsu Jiuri Machine Tool Technology Co., Ltd. focuses on JCOE/UOE longitudinal welded pipe equipment R&D. We serve Oil, Gas, Hydrogen, Wind Power and Urban Pipeline industries with high-performance manufacturing solutions.',
-      main_product: 'Main Product: JCOE / UOE Full Process Pipe Forming Lines',
+      overview_text: 'Jiangsu Jiuri Machine Tool Technology Co., Ltd. focuses on the R&D and manufacturing of JCOE/UOE longitudinal welded pipe production lines. We provide high-quality pipe forming equipment for global oil, gas, hydrogen, and wind energy sectors. The total area of the company is 66,000 square meters. Final assembly base 11,000 sqm, R&D base 3,000 sqm, and production base 15,000 sqm.',
+      main_product: 'Core Product: JCOE / UOE Full Process Pipe Forming Lines',
       culture_title: 'Corporate Culture',
       mission: 'Mission',
-      mission_text: 'Dedicated to advancing welding pipe equipment and Chinese manufacturing.',
+      mission_text: 'Focus on pipe equipment R&D, enhancing the core competitiveness of Chinese manufacturing.',
       vision: 'Vision',
-      vision_text: 'To emerge as the world’s leading provider of full process pipe forming lines.',
+      vision_text: 'To become the world’s leading supplier of complete straight seam welded pipe equipment.',
       values: 'Values',
-      values_text: 'Innovation · Precision · Expertise · Trustworthiness',
+      values_text: 'Innovation · Precision · Professional · Reliable',
       spirit: 'Spirit',
       spirit_text: 'Professionalism, Focus, Craftsmanship, Innovation',
+      talent_title: 'Talent Philosophy',
+      talent_text: 'Jiuri views technology as the core life force, committed to cultivating cutting-edge engineers, craftsman-type manufacturing talents, and forward-looking R&D talents.',
+      talent_philosophy: 'Technology as the foundation, craftsmanship as the spirit, innovation as the driving force.',
+      talent_keywords: 'Advocate Tech · Respect Craft · Encourage Innovation',
       core_values_title: 'Core Values',
-      core_values_list: ['Customer-Centric', 'Tech Leadership', 'Quality Foundation', 'Efficiency', 'Safety']
+      core_values_list: ['Customer Centric', 'Tech Leadership', 'Quality First', 'High Efficiency', 'Safety Always']
+    },
+    footer: {
+      desc: 'Focused on R&D and manufacturing of JCOE/UOE large-diameter longitudinal welded pipe equipment, committed to providing core power support for global energy engineering.',
+      products_list: ['JCOE Progressive Forming Machine', 'XB Dual-side Edge Milling Machine', 'NHJ Internal Pipe Welder', 'Mechanical Pipe Expander']
     },
     contact: {
       title: 'Contact Us',
-      phone: 'Telephone',
+      phone: 'Office Tel',
       mobile: 'Mobile',
-      email: 'Email',
-      address: 'Address',
-      address_text: 'Libao Industrial Zone, Haian City, Jiangsu, China',
-      recruitment_title: 'Join Us / Recruitment',
-      recruitment: 'Recruitment: Please send your CV to our corporate email.'
+      email: 'E-mail',
+      address: 'Location',
+      address_text: 'Libao Industrial Zone, Haian City, Jiangsu Province, China',
+      recruitment_title: 'Join Our Team',
+      recruitment: 'Careers: We are looking for talents! Please send your resume to our official email address.'
     }
   }
 };
 
 export const INDUSTRIES = [
   { name: '石油', nameEn: 'Oil', img: 'https://i.postimg.cc/28Z5p5L1/shi-you.jpg', icon: 'fa-oil-well' },
-  { name: '天然气', nameEn: 'Gas', img: 'https://i.postimg.cc/fWFbgdyd/tian-ran-qi.jpg', icon: 'fa-fire-flame-simple' },
+  { name: '天然气', nameEn: 'Natural Gas', img: 'https://i.postimg.cc/fWFbgdyd/tian-ran-qi.jpg', icon: 'fa-fire-flame-simple' },
   { name: '氢能', nameEn: 'Hydrogen', img: 'https://i.postimg.cc/kXb5r5RW/qing-neng.png', icon: 'fa-vial-circle-check' },
-  { name: '风能', nameEn: 'Wind/Clean Energy', img: 'https://i.postimg.cc/B67v3LCg/feng-dian-ta-tong.jpg', icon: 'fa-wind' },
-  { name: '城市管网', nameEn: 'Urban Pipeline', img: 'https://i.postimg.cc/ZqC4QkY4/cheng-shi-guan-wang-tu.jpg', icon: 'fa-city' }
+  { name: '风能', nameEn: 'Wind Power', img: 'https://i.postimg.cc/B67v3LCg/feng-dian-ta-tong.jpg', icon: 'fa-wind' },
+  { name: '城市管网', nameEn: 'Urban Grid', img: 'https://i.postimg.cc/ZqC4QkY4/cheng-shi-guan-wang-tu.jpg', icon: 'fa-city' }
 ];
 
 export const HONORS = [
-  'https://i.postimg.cc/NjbR4XLB/gao-qi-zheng-shu.jpg',
-  'https://i.postimg.cc/0QKmPHnC/9001ren-zheng-zhong-wen-ban-(1)-fu-ben.jpg',
-  'https://i.postimg.cc/RhrtFQp6/9001ren-zheng-zhong-wen-ban-(2)-fu-ben.jpg',
-  'https://i.postimg.cc/2jvvtM3g/jiang-su-jiu-ri-ji-chuang-ke-ji-you-xian-gong-si-zi-xin-zheng-shu-fu-ben.png',
-  'https://i.postimg.cc/MHkBTb3j/ruan-jian-zhe-zuo-quan-zheng-1-fu-ben.jpg',
-  'https://i.postimg.cc/qqfKRXD6/ruan-jian-zhe-zuo-quan-zheng-2-fu-ben.jpg'
+  { 
+    img: 'https://i.postimg.cc/ZY24JRRh/24834bb6-4af0-47b6-9e9e-fd7132353488.png', 
+    cn: '资信等级证书', 
+    en: 'Credit Rating Certificate' 
+  },
+  { 
+    img: 'https://i.postimg.cc/kMzq7443/43a92fa5-65b7-4312-b399-4f250304eb65.png', 
+    cn: '质量服务示范单位等级证书', 
+    en: 'Quality Service Demonstration Unit Rating Certificate' 
+  },
+  { 
+    img: 'https://i.postimg.cc/zD68qBBm/9001ren-zheng-zhong-wen-ban-(2)-fu-ben.jpg', 
+    cn: '质量管理体系认证', 
+    en: 'Quality Management System Certification' 
+  },
+  { 
+    img: 'https://i.postimg.cc/J0fLxTgP/9f0f26fd-18a9-40f9-b4a5-fee902683e2a.png', 
+    cn: '售后服务守信单位等级证书', 
+    en: 'After-sales Service Creditworthy Unit Rating Certificate' 
+  },
+  { 
+    img: 'https://i.postimg.cc/3rVY3RRy/b2e0ffe7-f512-4cd6-860a-aff81aff8b0f.png', 
+    cn: '诚信经营示范单位等级证书', 
+    en: 'Integrity Management Demonstration Unit Rating Certificate' 
+  },
+  { 
+    img: 'https://i.postimg.cc/Y2ZMt99G/b4d0b622-e268-4407-92ee-8e8ee93d6886.png', 
+    cn: '信用等级证书', 
+    en: 'Credit Grade Certificate' 
+  },
+  { 
+    img: 'https://i.postimg.cc/WpCTs33k/cb1aa8a6-4bf5-41c8-8d05-efa640a6fb66.png', 
+    cn: '重合同守信用单位等级证书', 
+    en: 'Contract-honoring and Credit-worthy Unit Rating Certificate' 
+  },
+  { 
+    img: 'https://i.postimg.cc/8k9NT55M/eb9cdc0a-327c-49db-abae-ddcbf3318bb1.png', 
+    cn: '中国诚信经理人认证证书', 
+    en: 'China Honest Manager Certification' 
+  },
+  { 
+    img: 'https://i.postimg.cc/66gtB33T/ruan-jian-zhe-zuo-quan-zheng-1-fu-ben.jpg', 
+    cn: '计算机软件著作权登记证书', 
+    en: 'Computer Software Copyright Registration Certificate' 
+  },
+  { 
+    img: 'https://i.postimg.cc/h46cKjjf/ruan-jian-zhe-zuo-quan-zheng-2-fu-ben.jpg', 
+    cn: '计算机软件著作权登记证书', 
+    en: 'Computer Software Copyright Registration Certificate' 
+  },
+  { 
+    img: 'https://i.postimg.cc/v8kbGBBw/gao-qi-zheng-shu-fu-ben.jpg', 
+    cn: '高新技术企业证书', 
+    en: 'High-Tech Enterprise Certificate' 
+  }
 ];
 
 export const PRODUCTS: (Product & { nameEn: string, descEn: string })[] = [

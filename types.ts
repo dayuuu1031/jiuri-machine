@@ -20,6 +20,6 @@ export enum Section {
   HOME = 'home',
   ABOUT = 'about',
   PRODUCTS = 'products',
-  NEWS = 'news',
+  ADVANTAGES = 'advantages',
   CONTACT = 'contact'
 }
