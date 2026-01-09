@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>江苏久日机床科技有限公司 - 专注JCOE/UOE直缝焊管装备</title>
+    <!-- 样式资源保持不变 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@400;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -123,18 +123,12 @@
         ::-webkit-scrollbar-track { background: var(--deep-space); }
         ::-webkit-scrollbar-thumb { background: var(--tech-cyan); }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
-  }
-}
-</script>
 </head>
 <body>
+    <!-- 这里的 id="root" 是 React 的家 -->
     <div id="root"></div>
+
+    <!-- ⬇️⬇️⬇️ 关键修改在这里：必须引用入口文件！ ⬇️⬇️⬇️ -->
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
